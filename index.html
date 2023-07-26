@@ -24,9 +24,10 @@
                 extend: {
                     colors: {
                         "primary-color": "#F85559",
+                        "secondary-color": "#121212",
                     },
                     backgroundImage: {
-                        "hero-bg": "url('./images/')",
+                        "banner-bg1": "url('./images/banner1.png')",
                     },
                 },
             },
@@ -45,18 +46,18 @@
 
 </head>
 
-<body>
+<body class="lato">
     <!-- ================== header ================== -->
-    <header class="max-w-screen-xl mx-auto px-32">
+    <header class="max-w-screen-xl mx-auto px-28">
 
         <!-- ------------ navbar ------------ -->
-        <div class="navbar rounded-full bg-primary-color px-12 py-6">
-            <div class="navbar-start">
-                <ul class="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li><a>Item 3</a></li>
-                    <li><a>Item 1</a></li>
-                    <li><a>Item 3</a></li>
+        <div class="navbar rounded-full lg:bg-primary-color px-10 py-5 my-8">
+            <div class="navbar-start hidden lg:flex">
+                <ul class="menu menu-horizontal">
+                    <li><a class="text-white text-base font-medium">Home</a></li>
+                    <li><a class="text-white text-base font-medium">About Us</a></li>
+                    <li><a class="text-white text-base font-medium">Shop</a></li>
+                    <li><a class="text-white text-base font-medium">All Fruits</a></li>
                 </ul>
                 <!-- <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost btn-circle">
@@ -76,13 +77,13 @@
             </div>
 
             <div class="navbar-center">
-                <a class="btn btn-ghost normal-case text-xl">
+                <a class="btn btn-ghost normal-case text-secondary-color md:text-white text-3xl font-bold">
                     <img src="./images/logo.png" alt="" class="w-10 h-10">Fruit Burst</a>
             </div>
 
             <div class="navbar-end relative">
-                <input type="text" placeholder="Type here" class="input w-full max-w-xs rounded-full" />
-                <button class="btn btn-ghost btn-circle absolute">
+                <input type="text" placeholder="Type here" class="input w-full max-w-xs rounded-full  hidden lg:flex" />
+                <button class="btn btn-ghost btn-circle absolute hidden lg:flex">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -100,30 +101,36 @@
                     </label>
                     <ul tabindex="0"
                         class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul class="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        <li><a class="text-base font-medium">Home</a></li>
+                        <li><a class="text-base font-medium">About Us</a></li>
+                        <li><a class="text-base font-medium">Shop</a></li>
+                        <li><a class="text-base font-medium">All Fruits</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <!-- ------------ banner ------------ -->
-        <div class="carousel w-full">
-            <div id="slide1" class="carousel-item relative w-full">
-                <img src="/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" class="w-full" />
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" class="btn btn-circle">❮</a>
-                    <a href="#slide2" class="btn btn-circle">❯</a>
+
+        <div class="relative">
+            <div class="carousel w-full min-h-[calc(100vh-232px)]">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <div
+                        class="w-full rounded-lg bg-banner-bg1 bg-no-repeat bg-cover bg-[#12121293] bg-blend-overlay text-white space-y-6 text-center pt-16">
+                        <h1 class="text-7xl font-extrabold">Exotic tastes at your <br> doorstep</h1>
+                        <p class="text-xl font-medium">We supply highly quality organic products</p>
+                        <button class="btn bg-primary-color text-white hover:text-primary-color border-none">Shop
+                            Now</button>
+                    </div>
+                    <!-- <img src="./images/banner1.png" class="w-full" /> -->
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4"
+                            class="btn btn-circle bg-secondary-color border-none text-white hover:text-secondary-color">❮</a>
+                        <a href="#slide2"
+                            class="btn btn-circle bg-secondary-color border-none text-white hover:text-secondary-color">❯</a>
+                    </div>
                 </div>
-            </div>
-            <div id="slide2" class="carousel-item relative w-full">
+                <!-- <div id="slide2" class="carousel-item relative w-full">
                 <img src="/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full" />
                 <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide1" class="btn btn-circle">❮</a>
@@ -142,6 +149,31 @@
                 <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide3" class="btn btn-circle">❮</a>
                     <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div> -->
+            </div>
+
+            <div
+                class="bg-white rounded-lg shadow-lg w-[82%] p-8 flex justify-center items-center text-center gap-8 absolute left-24 -bottom-28">
+                <div>
+                    <img src="./images/fruit1.png" alt="">
+                    <p class="text[#121208cc] text-lg font-medium">Grape</p>
+                </div>
+                <div>
+                    <img src="./images/fruit2.png" alt="">
+                    <p class="text[#121208cc] text-lg font-medium">Orange</p>
+                </div>
+                <div>
+                    <img src="./images/fruit3.png" alt="">
+                    <p class="text[#121208cc] text-lg font-medium">Mango</p>
+                </div>
+                <div>
+                    <img src="./images/fruit4.png" alt="">
+                    <p class="text[#121208cc] text-lg font-medium">Strawberry</p>
+                </div>
+                <div>
+                    <img src="./images/fruit5.png" alt="">
+                    <p class="text[#121208cc] text-lg font-medium">Pomegranate</p>
                 </div>
             </div>
         </div>
